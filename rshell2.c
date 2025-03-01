@@ -80,6 +80,7 @@ int main(int argc, char *argv[]){
                 return -1;
         }
         fclose(respfile);
+        remove("rshout.txt");    
                
         close(socfd);
         socfd = socket(p->ai_family, p->ai_socktype,p->ai_protocol);
